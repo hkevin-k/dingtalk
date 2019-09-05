@@ -1,0 +1,10 @@
+{
+	"name": "aliyun/dingtalk",
+	"description": "DingTalk PHP SDK",
+	"lincense": "MIT",
+	"autoload": {
+		"psr-4": {
+			"DingTalk\\": ""
+		}
+	}
+}
