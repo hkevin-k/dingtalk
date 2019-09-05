@@ -1,4 +1,7 @@
 <?php
+
+namespace dingtalk\top;
+
 /**
  * 返回的默认类
  * 
