@@ -1,6 +1,6 @@
 <?php
 
-namespace DingTalk;
+namespace dingtalk;
 
 class Client
 {
