@@ -4,7 +4,7 @@
 	"lincense": "MIT",
 	"autoload": {
 		"psr-4": {
-			"DingTalk\\": ""
+			"dd\\": ""
 		}
 	}
 }
