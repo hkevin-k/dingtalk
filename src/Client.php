@@ -327,7 +327,7 @@ class Client
 	}
 
     public function execute($request, $session = null,$bestUrl = null){
-        if(DingTalkConstant::$CALL_TYPE_OAPI == $this->apiCallType){
+        if(Constant::$CALL_TYPE_OAPI == $this->apiCallType){
             return $this->_executeOapi($request, $session, $bestUrl, null, null, null, null);
         }else{
             return $this->_execute($request, $session, $bestUrl);
@@ -343,7 +343,7 @@ class Client
     }
 
 	public function executeWithCorpId($request, $bestUrl = null, $accessKey, $accessSecret, $suiteTicket, $corpId) {
-        if(DingTalkConstant::$CALL_TYPE_OAPI == $this->apiCallType){
+        if(Constant::$CALL_TYPE_OAPI == $this->apiCallType){
             return $this->_executeOapi($request, null, $bestUrl,$accessKey, $accessSecret, $suiteTicket, $corpId);
         }else{
             return $this->_execute($request, null, $bestUrl);
@@ -413,7 +413,7 @@ class Client
             if(count($fileFields) > 0){
                 $resp = $this->curl_with_memory_file($requestUrl, $apiParams, $fileFields);
             }else{
-                if(DingTalkConstant::$METHOD_POST == $this->httpMethod){
+                if(Constant::$METHOD_POST == $this->httpMethod){
                     $resp = $this->curl_json($requestUrl, $apiParams);
                 }else{
                     $resp = $this->curl_get($requestUrl, $apiParams);
