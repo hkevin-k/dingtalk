@@ -2,6 +2,8 @@
 
 namespace dingtalk;
 
+use dingtalk\top\ResultSet;
+
 class Client
 {
 	/**@Author chaohui.zch copy from TopClient and modify 2016-12-14 **/
