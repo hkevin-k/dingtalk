@@ -2,6 +2,7 @@
 
 namespace dingtalk\request;
 
+use dingtalk\top\RequestCheckUtil;
 /**
  * dingtalk API: dingtalk.oapi.user.get request
  * 
