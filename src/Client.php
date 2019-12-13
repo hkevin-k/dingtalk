@@ -3,6 +3,7 @@
 namespace dingtalk;
 
 use dingtalk\top\ResultSet;
+use dingtalk\top\TopLogger;
 
 class Client
 {
