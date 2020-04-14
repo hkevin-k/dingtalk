@@ -2,6 +2,8 @@
 
 namespace dingtalk;
 
+require(dirname(__FILE__).'/Sdk.php');
+
 use dingtalk\top\ResultSet;
 use dingtalk\top\TopLogger;
 
