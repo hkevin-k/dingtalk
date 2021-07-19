@@ -2,11 +2,20 @@
 
 namespace dingtalk\crypto;
 
+/**
+ * 原本的类库里使用和类名相同的方法当做构造函数
+ * 如果该类也同时存在构造函数：__construct( )，那么，与类名同名的方法将不会执行。
+ * 当然使用命名空间：namespace，与类名同名的方法，将变为普通的方法。
+ *
+ *
+ * Class Prpcrypt
+ * @package dingtalk\crypto
+ */
 class Prpcrypt
 {
     public $key;
 
-    function Prpcrypt($k)
+    public function __construct($k)
     {
         $this->key = base64_decode($k . "=");
     }
@@ -41,7 +50,7 @@ class Prpcrypt
             //print(base64_encode($encrypted));
             //使用BASE64对加密后的字符串进行编码
             return array(ErrorCode::$OK, base64_encode($encrypted));
-        } catch (Exception $e) {
+        } catch (\Exception $e) {
             print $e;
             return array(ErrorCode::$EncryptAESError, null);
         }
@@ -64,7 +73,7 @@ class Prpcrypt
 
 
             // return $decrypted;
-        } catch (Exception $e) {
+        } catch (\Exception $e) {
             return array(ErrorCode::$DecryptAESError, null);
         }
 
@@ -81,7 +90,7 @@ class Prpcrypt
             $xml_len = $len_list[1];
             $xml_content = substr($content, 4, $xml_len);
             $from_corpid = substr($content, $xml_len + 4);
-        } catch (Exception $e) {
+        } catch (\Exception $e) {
             print $e;
             return array(ErrorCode::$DecryptAESError, null);
         }

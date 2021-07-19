@@ -45,7 +45,7 @@ class DingCallbackCrypto
         if ($ret != 0) {
             //return $ret;
             // return ['ErrorCode'=>$ret, 'data' => ''];
-            throw new Exception('AES加密错误',ErrorCode::$EncryptAESError);
+            throw new \Exception('AES加密错误',ErrorCode::$EncryptAESError);
         }
 
         if ($timeStamp == null) {
@@ -58,7 +58,7 @@ class DingCallbackCrypto
         $ret = $array[0];
         if ($ret != 0) {
             //return $ret;
-            throw new Exception('ComputeSignatureError',ErrorCode::$ComputeSignatureError);
+            throw new \Exception('ComputeSignatureError',ErrorCode::$ComputeSignatureError);
         }
         $signature = $array[1];
 
